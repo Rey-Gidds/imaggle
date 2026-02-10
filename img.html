@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle</title>
+    <link rel="stylesheet" href="puzzle.css">
+</head>
+<body>
+    <div class="appheader">
+        <p class="mainHeading" align="center">Imaggle</p>
+    </div><br><br>
+    <div class="rulesArea">
+        <h2>Objective: 
+        </h2><p class="Objective">Complete the puzzle </p><br>
+        <h2>Instructions:</h2><small>(That you dont care about , but are important , slightly)</small>
+        <ol>
+            <li>Image piece can be selected from the selection area below , Selected piece is displayed below</li>
+            <li>Place the image piece on the grid to Complete the puzzle</li>
+            <li>Placed piece can be removed by clicking on the respective grid button.</li>
+            <li>
+                <ul type="disc">
+                <dl>
+                    <li><dt>Placed:
+                        <dd>Image pieces placed in the grid</dd>
+                    </dt></li>
+                    <li>
+                    <dt>Right Placed:
+                        <dd>Rightly placed pieces in the grid.</dd>
+                    </dt>
+                </li>
+                </dl>
+            </ul>
+            </li>
+            <li>lastly , HAPPY PLAYY !!!</li>
+        </ol>
+
+    </div>
+    <br><br>
+    <div class="scoreCard">
+        <h1>Scores:</h1>
+        <div class="innerScoreCard">
+            Placed: <p id="placed"></p>
+            Right Placed: <p id="rightPlaced"></p>
+        </div>
+    </div>
+    
+    <div class="alertArea" ></div>
+    <table width="300px" height="300px"  id="puzzleGrid" cellspacing="0px"  class="tableGrid" border="0px" >
+        <tr>
+            <td><button data-index="0" class="gridBtn" data-placed=""></button></td>
+            <td><button data-index="1" class="gridBtn" data-placed=""></button></td>
+            <td><button data-index="2" class="gridBtn" data-placed=""></button></td>
+        </tr>
+        <tr>
+            <td><button data-index="3" class="gridBtn" data-placed=""></button></td>
+            <td><button data-index="4" class="gridBtn" data-placed=""></button></td>
+            <td><button data-index="5" class="gridBtn" data-placed=""></button></td>
+        </tr>
+        <tr>
+            <td><button data-index="6" class="gridBtn" data-placed=""></button></td>
+            <td><button data-index="7" class="gridBtn" data-placed=""></button></td>
+            <td><button data-index="8" class="gridBtn" data-placed=""></button></td>
+        </tr>
+    </table>
+    <br><br>
+    <h1 align="center">Selected Piece: </h1>
+    <div class="selectedImage"></div><br>
+    <div class="resetBtnContainer">
+        <button class="resetBtn">Remove</button>
+    </div>
+    <br><br>
+    <h1 align="center">Pieces: </h1>
+    <div class="puzzleImages"></div>
+    <script src="puzzleLogic.js"></script>
+</body>
+</html>

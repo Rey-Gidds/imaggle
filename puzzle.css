@@ -1,0 +1,118 @@
+body{
+    background-color: beige;
+    overflow-x: hidden;
+}
+*{
+    margin: 0px;
+}
+.appheader{
+    width: 98vw;
+    background-color: midnightblue;
+    padding: 2vw;
+}
+.mainHeading{
+    font-size: 50px;
+    color: white;
+    text-shadow: 4px 4px 4px rgba(0, 195, 255, 0.518);
+}
+.rulesArea
+{
+    background-color: aquamarine;
+    padding: 2vw;
+    border-radius: 20px;
+    border: dashed 2px;
+    margin: 10px;
+}
+.rulesArea ol li{
+    margin: 20px;
+}
+.scoreCard{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 2vw;
+    border-radius: 20px;
+    margin: 2vh;
+    font-size: 20px;
+}
+.innerScoreCard{
+    background-color: white;
+    color: black;
+    padding: 2vw;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.alertArea{
+    color: red;
+    font-size: 5vw;
+    margin: 5px;
+}
+.tableGrid{
+    margin: auto;
+}
+.gridBtn{
+    width: 100px;
+    height: 110px;
+}
+.resetBtnContainer{
+    display: flex;
+    justify-content: center;
+}
+.selectedImage{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+.selectedImage img{
+    width: 150px;
+    height: 145px;
+    border-radius: 10px;
+    
+}
+.resetBtn{
+    background-color: red;
+    border-radius: 20px;
+    border: solid 1px;
+    padding: 10px;
+    filter: drop-shadow(1px 2px );
+    transition: border-radius 0.30s ease;
+}
+.resetBtn:hover{
+    border-radius: 5px;
+}
+.puzzleImages{
+    width: 85vw;
+    height: fit-content;
+    background-color: midnightblue;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    border: solid 2px;
+    margin: auto;
+    padding: 20px;
+}
+.puzzleImages img{
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+    margin: 0.7vw;
+}
+.imagePlaced{
+    border-radius: 3px;
+    width: 100px;
+    height: 110px;
+    margin-top: -2px;
+    margin-left: -8px;
+}
+.choiceBtn{
+    background-color: bisque;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 0px;
+    transition: transform 0.50s ease;
+}
+.choiceBtn:hover{
+    transform: scale(1.08);
+}

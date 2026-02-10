@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imaggle</title>
+    <style>
+        *{
+            margin: 0px;
+            overflow-x: hidden;
+        }
+        .appheader{
+            width: 100vw;
+            background-color: midnightblue;
+            padding: 2vw;
+        }
+        .mainHeading{
+            font-size: 50px;
+            color: white;
+            text-shadow: 4px 4px 4px rgba(0, 195, 255, 0.518);
+        }
+        .imageContainer{
+            display: flex;
+            justify-content: space-evenly;
+            background-color:  darkslategray;
+            padding: 10px;
+            width: 90vw;
+            height: fit-content;
+            margin: auto;
+            flex-wrap: wrap;
+            border-radius: 20px;
+        }
+        .imageContainer img{
+            width: 200px;
+            border-radius: 10px;
+            filter: drop-shadow(2px 2px 2px black);
+            margin: 10px;
+        }
+        img{
+            transition: transform 0.50s ease;
+        }
+        img:hover{
+            transform: scale(1.05);
+        }
+        .preview p {
+            font-size: 5vh;
+            margin: 10px;
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="appheader">
+        <p class="mainHeading" align="center">Imaggle</p>
+    </div>
+    <br><br><br><br><br>
+    <h1 align="center">Select an image to begin the puzzle game:-</h1>
+    <br><br>
+    <div class="preview">
+        <p><b>Observe the image carefully</b>, Image preview will no longer be available after entering the game</p>
+    </div>
+    <div class="imageContainer"></div>
+    <script>
+        function displayImages(){
+            imageContainer = document.querySelector('.imageContainer')
+            PuzzleImages = [
+                'image1/main.jpg',
+                'image2/main.jpg',
+                'image3/main.jpg',
+                'image4/main.jpg',
+                'image5/main.jpg',
+                'image6/main.jpg',
+                'image7/main.jpg',
+                'image8/main.jpg',
+                'image9/main.jpg',
+                'image10/main.jpg',
+                'image11/main.jpg',
+                'image12/main.jpg',
+                'image13/main.jpg',
+                'image14/main.jpg',
+                'image15/main.jpg',
+                'image16/main.jpg',
+                'image17/main.jpg',
+                'image18/main.jpg',
+                
+            ]
+            for(let i = 0 ; i<PuzzleImages.length ; i++){
+                console.log('displaying the images.')
+                const image = document.createElement('a')
+                image.href = `img.html`
+                image.setAttribute('data-value' , `${i+1}`)
+                image.className = 'imageSelectedForPuzzle'
+                image.innerHTML = `<img src = '${PuzzleImages[i]}' alt = 'puzzle image' >`
+                imageContainer.appendChild(image)
+            }
+            document.querySelectorAll('.imageSelectedForPuzzle').forEach((image) => {
+                image.addEventListener('click' , () => {
+                    let index = image.getAttribute('data-value')
+                    localStorage.setItem('index' , index)
+                })
+            })   
+        }
+        
+        displayImages()
+    </script>
+</body>
+</html>
